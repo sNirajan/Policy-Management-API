@@ -31,7 +31,7 @@ class PolicyController extends Controller
         // Validates the request data
         $validatedData = $request->validate([
             'policy_number' => 'required|unique:policies',
-            'customer_number' => 'required|string',
+            'customer_name' => 'required|string',
             'premium_amount' => 'required|numeric',
             'status' => 'required|in:active,cancelled,pending',
         ]);
