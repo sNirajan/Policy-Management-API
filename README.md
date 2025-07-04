@@ -1,25 +1,93 @@
-# Laravel + React Starter Kit
+# Policy Management API
 
-## Introduction
+A simple Laravel REST API to manage insurance policies.
 
-Our React starter kit provides a robust, modern starting point for building Laravel applications with a React frontend using [Inertia](https://inertiajs.com).
+## Features
 
-Inertia allows you to build modern, single-page React applications using classic server-side routing and controllers. This lets you enjoy the frontend power of React combined with the incredible backend productivity of Laravel and lightning-fast Vite compilation.
+- CRUD operations for policies
+- Validation and error handling
+- RESTful JSON responses
+- Pest tests for endpoints
+- SQLite or MySQL support
 
-This React starter kit utilizes React 19, TypeScript, Tailwind, and the [shadcn/ui](https://ui.shadcn.com) and [radix-ui](https://www.radix-ui.com) component libraries.
+## Endpoints
 
-## Official Documentation
+| Method | URL                   | Description             |
+|--------|-----------------------|-------------------------|
+| GET    | /api/policies         | List all policies      |
+| POST   | /api/policies         | Create a new policy    |
+| GET    | /api/policies/{id}    | Show a single policy   |
+| PUT    | /api/policies/{id}    | Update a policy        |
+| DELETE | /api/policies/{id}    | Delete a policy        |
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+## Setup Instructions
 
-## Contributing
+1. Clone the repo:
+git clone https://github.com/YOUR-USERNAME/Policy-Management-API.git
+cd Policy-Management-API
 
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+markdown
+Copy
+Edit
 
-## Code of Conduct
+2. Install dependencies:
+composer install
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+markdown
+Copy
+Edit
+
+3. Copy `.env` and configure:
+cp .env.example .env
+
+markdown
+Copy
+Edit
+- Set `DB_CONNECTION` to `sqlite` or `mysql`.
+
+4. Create SQLite file:
+touch database/database.sqlite
+
+markdown
+Copy
+Edit
+
+5. Generate app key:
+php artisan key:generate
+
+markdown
+Copy
+Edit
+
+6. Migrate:
+php artisan migrate
+
+cpp
+Copy
+Edit
+
+7. Seed (optional):
+php artisan db:seed
+
+markdown
+Copy
+Edit
+
+8. Run:
+php artisan serve
+
+shell
+Copy
+Edit
+
+## Running Tests
+
+php artisan test
+
+shell
+Copy
+Edit
 
 ## License
 
-The Laravel + React starter kit is open-sourced software licensed under the MIT license.
+MIT
