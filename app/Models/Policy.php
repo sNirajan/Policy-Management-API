@@ -16,7 +16,7 @@ class Policy extends Model
     // Mass assignable fields
     protected $fillable = [
         'policy_number',
-        'customer_name',
+        'customer_number',
         'premium_amount',
         'status',
     ];
